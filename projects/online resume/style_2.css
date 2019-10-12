@@ -1,0 +1,38 @@
+.resume {
+	max-width: 700px;
+	border: 1px solid #2C97F4;
+	margin: 0 auto;
+	display: flex;
+}
+
+
+h1 {
+	flex: 1;
+	background-color: #2C97F4;
+	color: white;
+	margin-top: 0;
+	margin-bottom: 0;
+	text-align: center;
+	padding-top: 50px ;
+}
+
+.main {
+	flex: 4;
+	padding-left: 25px;
+
+}
+
+.basic-info p,.contact p {
+	float: left;
+	margin-right: 30px;
+}
+
+.contact,.basic-info {
+	overflow: auto;
+}
+
+.ability p,
+.education p,
+.projects p {
+	margin-top: 3px;
+}

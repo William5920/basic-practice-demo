@@ -1,0 +1,111 @@
+
+nav,.position,.location {
+  height: 50px;
+  flex: 100%;
+  display: flex;
+}
+
+nav ul ,.position,.location{
+  padding: 0;
+  list-style-type: none;
+  flex: 2;
+  display: flex;
+}
+
+nav li{
+  font-size:18px;
+}
+nav p{
+  display:inline-block;
+  font-size:13px;
+  margin:10px 80px 0px 0px;
+  padding:10px 10px 5px 0px;
+}
+nav img{
+  margin:10px 0px 0px 80px;
+  height:35px;
+}
+
+nav li ,.position li,.location li{
+  display: inline;
+  text-align: center;
+  flex: 1;
+}
+aside ul{
+  list-style-type:none;
+}
+aside li{
+  height:50px;
+  line-height:50px;
+  
+}
+aside li:hover,.position li:hover,.location li:hover{
+  color:white;
+  background-color:#1396F4;
+}
+.position li,.location li{
+  padding-top:15px;
+}
+#li1,#li2,#li3{
+  color:white;
+  background-color:#1396F4;
+}
+
+#pic{
+  width:15px;
+  height:15px;
+}
+main {
+  display: flex;
+}
+
+div {
+  flex: 4;
+}
+figure{
+  margin-left:80px;
+  
+}
+
+aside {
+  flex: 1;
+  margin-left: 10px;
+  padding: 1%;
+  text-align:center;
+}
+
+footer{
+  font-size:5px;
+  color:grey;
+  text-align:center;
+}
+ table {
+            border-collapse:collapse;
+            width:800px;
+            margin:0 auto;
+        }
+ 
+        td,th {
+            height:50px;
+            width:200px;
+            text-align:center;
+        }
+#input1{
+  font-size:15px;
+  color:grey;
+  width:950px;
+  height:35px;
+  border:1px solid #1396F4;
+}
+#input2{
+  font-size:15px;
+  width:100px;
+  height:40px;
+  color:white;
+  background-color:#1396F4;
+}
+
+form input{
+  margin-top:30px;
+}
+

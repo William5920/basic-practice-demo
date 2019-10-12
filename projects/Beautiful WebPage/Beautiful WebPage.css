@@ -1,0 +1,524 @@
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+/*--header css--*/
+
+header {
+
+	width: 100%;
+	height: 990px;
+	background-image: url(images/headerBG.jpg);
+}
+
+.shadow1 {
+	background-color: rgba(0,0,0,0.5);
+	width: 100%;
+	height: 100%;
+}
+
+h1 {
+	color: white;
+	margin: 0 auto;
+	text-align: center;
+	font-size: 60px;
+	padding-top: 280px;
+	padding-bottom: 80px;
+}
+
+header .intro {
+	margin: 0 auto;
+	color: #ccc;
+	width: 800px;
+
+}
+
+.intro p {
+	font-size: 20px;
+	text-align: center;
+	margin: 0;
+}
+
+header form {
+	width: 1000px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	margin: 0 auto;
+}
+
+header form {
+	color: white;
+	margin-top: 100px;
+	padding: 40px 60px;
+	text-align: center;
+}
+
+header form p[id="free"] {
+	color: #ccc;
+	font-size: 14px;
+}
+
+header form p[id="creAct"] {
+	letter-spacing: 4px;
+}
+
+header form input {
+	color: #ccc;
+	height: 50px;
+	width: 300px;
+	background-color: transparent;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	margin-right: 30px;
+	padding-left: 20px;
+}
+
+header form button {
+	width: 120px;
+	height: 50px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	letter-spacing: 3px;
+}
+
+/*--page2 css--*/
+
+.page2 {
+	padding: 70px 220px;
+}
+
+#boatloads {
+	text-align: center;
+	font-size: 10px;
+	letter-spacing: 1px;
+	color: #6F7172;
+}
+
+.ready-made {
+	text-align: center;
+	font-size: 32px;
+	letter-spacing: 2px;
+	margin: 0 auto;
+}
+
+.iconText {
+	margin: 80px 20px 30px 20px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	grid-gap: 50px 80px;
+}
+
+.phone,
+.right,
+.pen,
+.lineball {
+	display: flex;
+	align-items: flex-start;
+}
+
+.phone img,
+.right img,
+.pen img,
+.lineball img {
+	margin-right: 25px;
+	margin-top: 5px;
+}
+
+.phoneText p:first-child,
+.rightText p:first-child,
+.penText p:first-child,
+.lineballText p:first-child {
+	margin-top: 0;
+}
+
+.phoneText p:last-child,
+.rightText p:last-child,
+.penText p:last-child,
+.lineballText p:last-child {
+	font-size: 15px;
+	color: #A2A4A5;
+}
+
+/*--page3 css--*/
+
+.page3 {
+	background-image: url(images/page3BG.jpg);
+}
+
+.shadow2 {
+	background-color: rgba(0,0,0,0.7);
+	padding: 60px 200px;
+	padding-right: 0;
+	overflow: hidden;
+}
+
+.call-to-action {
+	color: white;
+	width: 40%;
+	float: left;
+	padding-top: 100px;
+}
+
+.callText {
+	width: 60%;
+}
+
+.callText h3 {
+	font-size: 30px;
+}
+
+.callText p {
+	font-size: 15px;
+	color: #ccc;
+}
+
+.call-to-action form input {
+
+	height: 50px;
+	padding: 10px 20px;
+	border-radius: 3px;
+	margin-right: 25px;
+	margin-top: 25px;
+}
+
+.call-to-action form input:last-child {
+	background-color: transparent;
+	color: #ccc;
+}
+
+.ipad {
+	border: 1px solid #ddd;
+	border-right: none;
+	border-top-left-radius: 30px;
+	border-bottom-left-radius: 30px;
+	padding:30px 0;
+	color: white;
+	flex: 1 1 auto;
+	display: flex;
+	width: 695px;
+	float: right;
+}
+
+#circle {
+	width: 10px;
+	height: 10px;
+	border: 1px solid #ddd;
+	border-radius: 50%;
+	align-self: center;
+	margin-left: 30px;
+	margin-right: 30px;
+}
+
+.data {
+	background-color: white;
+	color: black;
+	padding: 50px;
+	padding-left: 50px;
+	padding-right: 0;
+}
+
+.data h3 {
+	text-align: center;
+	font-size: 23px;
+}
+
+.data #here {
+	text-align: center;
+	color: #A5A4A4;
+}
+
+.dataIcon {
+	display: flex;
+	margin-top: 40px;
+}
+
+.cap,
+.direction,
+.example {
+	flex: 1;
+	margin: 20px;
+}
+
+.example {
+	margin-right: 0;
+}
+
+.imgTxt {
+	width: 175px;
+	height: 137px;
+	padding: 10px;
+	margin-top: 0;
+	box-shadow: 1px 1px 3px #E0E0E0;
+}
+
+.example .imgTxt {
+	width: 122px;
+	padding-right: 0;
+}
+
+.imgTxt p:last-child {
+	font-size: 12px;
+	color: #B7B5B5;
+}
+
+/*--page4 css--*/
+
+.page4 {
+	padding: 50px 210px;
+}
+
+.page4 h2 {
+	text-align: center;
+	font-size: 32px;
+	letter-spacing: 1px;
+}
+
+.page4 .professor {
+	display: flex;
+	margin-top: 70px;
+}
+
+.professor .hero {
+	margin: 0 100px;
+}
+
+.professorItem {
+	text-align: center;
+}
+
+.professorItem p {
+	color: #7C7C7C;
+
+}
+
+/*--page5 css--*/
+
+.page5 {
+	border-top: 1.5px solid #F2F2F2;
+	border-bottom: 1.5px solid #F2F2F2;
+	padding: 100px 250px;
+}
+
+.plant {
+	overflow: auto;
+	margin-bottom: 70px;
+}
+
+.plant img {
+	float: left;
+	margin-right: 70px;
+}
+
+.plantTxt,
+.birdTxt {
+	padding-top: 50px;
+}
+
+.plantTxt p:first-child,
+.birdTxt p:first-child {
+	font-size: 20px;
+}
+
+.plantTxt p:last-child,
+.birdTxt p:last-child {
+	font-size: 16px;
+	color: #7C7C7C;
+}
+
+.bird {
+	overflow: auto;
+}
+
+.bird img {
+	float: right;
+	margin-left: 70px;
+}
+
+/*--page6 css--*/
+
+.page6 {
+	padding: 80px 15%;
+}
+
+.page6 .textBox {
+	text-align: center;
+	width: 600px;
+	margin: 0 auto;
+	margin-bottom: 50px;
+}
+
+.page6 .textBox h2 {
+	font-size: 35px;
+}
+
+.page6 .textBox p {
+	color: #7C7C7C;
+}
+
+.photos {
+	font-size: 0;
+	display: grid;
+	grid: 1fr 1fr / 1fr 1fr;
+	grid-gap: 35px;
+    justify-items: center;
+}
+
+.photos .person {
+	position: relative;/* help .mask to use position: absolute;*/
+	width: 470px;
+}
+
+.photos .person img {
+
+}
+
+.photos .person .mask {
+	background-color: rgba(0,0,0,0.3);
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: none;
+	font-size: 20px;
+	text-align: center;
+	color: white;
+	padding: 90px;
+}
+
+.person .mask .senior {
+	color: #DDDDDD;
+	font-size: 14px;
+
+}
+
+[alt="twitter-icon"] {
+	margin: 0px 20px;
+}
+
+.mask .icon-box {
+	margin-top: 30px;
+}
+
+.person:hover .mask {
+	display: block;
+	cursor: pointer;
+}
+
+/*--page7 css--*/
+
+.page7 {
+	padding: 40px 220px;
+	border-top: 1.5px solid #F2F2F2;
+	display: flex;
+}
+
+.page7 form {
+	border: 1.5px solid #D1D1D1;
+	border-radius: 10px;
+	padding: 50px;
+	text-align: center;
+	flex: 1;
+}
+
+.page7 form input,
+.page7 form textarea {
+	width: 100%;
+	height: 50px;
+	margin: 15px;
+	margin-left: 0;
+	margin-right: 0;
+	padding: 10px;
+	color: #C4C4C4;
+	border-radius: 2px;
+	border: 1.5px solid #D1D1D1;
+}
+
+.page7 form h3 {
+	letter-spacing: 2px;
+}
+
+.page7 form textarea {
+	height: 150px;
+}
+
+.page7 form #send {
+	color: white;
+	background-color: black;
+	border: 1.5px solid black;
+	letter-spacing: 1px;
+}
+
+.page7 .contact-detail {
+	flex: 1;
+	padding: 50px 120px;
+}
+
+.page7 .contact-detail h2 {
+	font-size: 40px;
+}
+
+.page7 .contact-detail #contact {
+	color: #C4C4C4;
+	margin-bottom: 50px;
+}
+
+.page7 .contact-detail img {
+	float: left;
+	margin-top: 3px;
+	margin-right: 20px;
+}
+
+.page7 .contact-detail .con-icon {
+	display: flex;
+	align-items: flex-start;
+	margin-bottom: 20px;
+}
+
+.page7 .contact-detail p {
+	margin-top: 0;
+}
+
+/*--page8 css--*/
+
+footer {
+	padding: 50px 150px;
+	background-color: #0F0F0F;
+	color: #F2EFEF;
+	display: flex;
+	justify-content: space-between;
+}
+
+.footer-item {
+	width: 20%;
+}
+
+.footer-item ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+.footer-item li {
+	color: #9B9999;
+	line-height: 45px;
+}
+
+.footer-item p {
+	color: #9B9999;
+}
+
+.footer-item img {
+	margin-top: 30px;
+}
+
+
+
+
+

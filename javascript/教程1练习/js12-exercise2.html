@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title></title>
+    <script type="text/javascript">
+        //定义全局变量，用于标题切换的开关
+        var flag = 0;
+        //定时器
+        window.onload = function () {
+            setInterval("changeTitle()",1000);
+        }
+        //定义改变标题的函数
+        function changeTitle()
+        {
+            if(flag==0)
+            {
+                document.title = "★☆★绿叶学习网★☆★";
+                flag = 1;
+            }
+            else
+            {
+                document.title = "☆★☆绿叶学习网☆★☆";
+                flag = 0;
+            }
+        }
+    </script>
+</head>
+<body>
+    <p>快看我酷炫的标题！</p>
+</body>
+</html>

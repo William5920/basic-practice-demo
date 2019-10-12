@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">    
+    <title>IFE ECMAScript</title>
+</head>
+<body>        
+    <input id="first-number" type="text" value="0" placeholder="第一个数字">
+    <input id="second-number" type="text" value="0" placeholder="第二个数字">
+    <button id="add-btn">加</button>
+    <button id="minus-btn">减</button>
+    <button id="times-btn">乘</button>
+    <button id="divide-btn">除</button>
+    <p id="result">运算结果</p>
+    <script>
+        var first_number = document.querySelector("#first-number");
+        var second_number = document.querySelector("#second-number");
+        var add_btn = document.querySelector("#add-btn");
+        var minus_btn = document.querySelector("#minus-btn");
+        var times_btn = document.querySelector("#times-btn");
+        var divide_btn = document.querySelector("#divide-btn");
+        var result = document.querySelector("#result");
+
+
+
+        add_btn.onclick = function() {
+            var num1 = Number(first_number.value);
+            var num2 = Number(second_number.value);
+            /*
+            console.log(num1);
+            console.log(num2);
+            console.log(typeof num1);
+            console.log(typeof num2);
+            console.log(isNaN(num1));
+            console.log(isNaN(num2));
+            console.log(Number.isNaN(num1));
+            console.log(Number.isNaN(num2));
+            */
+            if(Number.isNaN(num1) || Number.isNaN(num2)) {
+                alert('Please input numbers in both boxs!');
+            }
+            else {
+                var num = num1 + num2;
+                result.innerHTML = ' 运算结果是： ' + num;
+            }
+
+            
+        }
+
+        minus_btn.onclick = function() {
+            var num1 = Number(first_number.value);
+            var num2 = Number(second_number.value);
+
+            if(Number.isNaN(num1) || Number.isNaN(num2)) {
+                alert('Please input numbers in both boxs!');
+            }
+            else {
+                var num = num1 - num2;
+                result.innerHTML = ' 运算结果是： ' + num;
+            }
+        }
+
+        times_btn.onclick = function() {
+            var num1 = Number(first_number.value);
+            var num2 = Number(second_number.value);
+
+            if(Number.isNaN(num1) || Number.isNaN(num2)) {
+                alert('Please input numbers in both boxs!');
+            }
+            else {
+                var num = num1 * num2;
+                result.innerHTML = ' 运算结果是： ' + num;
+            }
+        }
+
+        divide_btn.onclick = function() {
+            var num1 = Number(first_number.value);
+            var num2 = Number(second_number.value);
+
+            if(Number.isNaN(num1) || Number.isNaN(num2) || num2 == 0) {
+                alert("Please input numbers in both boxs, and the number divided can't be 0!");
+            } else {
+                var num = num1 / num2;
+                result.innerHTML = ' 运算结果是： ' + num;
+            }
+        }
+    </script>
+</body>
+</html>

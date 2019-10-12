@@ -1,0 +1,117 @@
+<!DOCTYPE html> 
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>font-family属性</title>
+    <style type="text/css">
+        #p1{
+        	font-family:"隶变-简";/*由于浏览器问题，字体样式只能在Safari里面显示，无法在chrome里面显示*/
+        	font-size:40px;
+        	color:#ce0592;
+        	font-weight:bold;
+        	text-decoration:underline;
+        }
+        #p2{font-family:微软雅黑;
+        	color:orange;
+        	text-decoration:line-through;
+        }
+        #p3{
+        	
+        	font-variant:small-caps;
+        }
+        #p4,#p5{
+        	font-size:14px;
+        	text-indent:28px;
+        	line-height:14px;
+        	background-image:url(../HTML/背景.png);
+        }
+        div{
+        	height:200px;
+        	text-align:center;
+        	/*border-width:15px;
+        	border-style:ridge;
+        	border-color:red;*/
+        	border:15px solid blue;
+        }
+        #img1{vertical-align:top;}
+        #div2{
+        	width:500px;
+        	height:500px;
+        	background-image:url(../HTML/背景.png);
+        	background-repeat:repeat;
+        	background-position:right center;
+        	background-attachment:scroll;
+        }
+        #img2{
+        	float:left;
+        	margin-right:20px;
+        }
+        a{
+        	text-decoration:none;
+        	background-color:blue;
+        	color:yellow;
+        }
+        a:hover{color:red;}
+        h3:hover{background-color:green;}
+
+        table,tr,th,td{border:1px solid red;}
+        table{
+        	border-collapse:separate;
+        	border-spacing:5px 10px;
+        }
+        /*caption{caption-side:bottom;}*/
+    </style>
+</head>
+<body>
+    <p id="p1"><em>字体为宋体</em></p>
+    <p id="p2">字体为微软雅黑</p>
+    <p id="p3">英文：bytedance is a good company,which is full of energy and creation.</p>
+    <hr/>
+    <h3>爱莲说</h3>
+    <p id="p4">水陆草木之花，可爱者甚蕃。晋陶渊明独爱菊。自李唐来，世人甚爱牡丹。予独爱莲之出淤泥而不染，濯清涟而不妖，中通外直，不蔓不枝，香远益清，亭亭净植，可远观而不可亵玩焉。</p>
+    <p id="p5">予谓菊，花之隐逸者也；牡丹，花之富贵者也；莲，花之君子者也。噫！菊之爱，陶后鲜有闻；莲之爱，同予者何人? 牡丹之爱，宜乎众矣。</p>
+    <hr/>
+
+    <div>
+    	北京字节跳动科技有限公司
+    <img id="img1" src="../HTML/字节跳动logo.png" alt="字节跳动logo" title="字节跳动logo">
+	</div>
+	<hr/>
+
+	<div id="div2">
+		<h3>爱莲说</h3>
+		<img id="img2" src="爱莲说.png">
+	    <p>水陆草木之花，可爱者甚蕃。晋陶渊明独爱菊。自李唐来，世人甚爱牡丹。予独爱莲之出淤泥而不染，濯清涟而不妖，中通外直，不蔓不枝，香远益清，亭亭净植，可远观而不可亵玩焉。</p>
+	    <p>予谓菊，花之隐逸者也；牡丹，花之富贵者也；莲，花之君子者也。噫！菊之爱，陶后鲜有闻；莲之爱，同予者何人? 牡丹之爱，宜乎众矣。</p>
+	</div>
+	<hr/>
+
+	<a href="https://www.baidu.com/" target=_blank>百度一下，你就知道</a>
+	<hr/>
+
+	<table>
+		<caption>表格标题</caption>
+		<thead>
+			<tr>
+				<th>表头1</th>
+				<th>表头2</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>单元格1</td>
+				<td>单元格2</td>
+			</tr>
+			<tr>
+				<td>单元格3</td>
+				<td>单元格4</td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td>单元格5</td>
+				<td>单元格6</td>
+			</tr>
+		</tfoot>
+	</table>
+</body>
+</html>

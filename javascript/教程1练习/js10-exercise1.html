@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>第十章语法测试</title>
+	<script type="text/javascript">
+		/*document.write("测试window对象");
+		window.open("https://v.qq.com/","","");
+		window.open("https://bbs.hupu.com/cba","","width=200,height=200,scrollbars");*/
+		var subWindow = window.open("https://v.qq.com/","","width=600,height=200");
+		function closeWindow()
+		{
+			subWindow.close();
+		}
+		function resizeWindow()
+		{
+			subWindow.resizeTo(200,200);
+		}
+		function moveWindow()
+		{
+			subWindow.moveTo(50,50);
+		}
+		window.onload = function()
+		{
+			setTimeout("alert('欢迎来到绿叶学习网');",3000);
+		}
+	</script>
+</head>
+<body>
+	<input id="clobtn" type="button" value="关闭窗口" onclick="closeWindow()">
+	<input id="chabtn" type="button" value="改变大小" onclick="resizeWindow()">
+	<input id="movbtn" type="button" value="移动窗口" onclick="moveWindow()"><br/>
+	<a href="javascript:window.history.go(-1);">向后退一次</a><br/>
+	<a href="javascript:window.history.forward();">下一页</a><br/>
+	<a href="javascript:window.history.back();">上一页</a><br/>
+	<p>3s后提示欢迎语！</p>
+</body>
+</html>

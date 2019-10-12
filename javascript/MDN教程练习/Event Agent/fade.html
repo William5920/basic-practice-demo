@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Fade Effect</title>
+	</head>
+	<body>
+		<div id="fade-obj" style="width:300px;height:300px;background:#000;opacity:1"></div>
+        <button id="fade-btn">淡出</button>
+        <script>
+        	var obj = document.querySelector('#fade-obj');
+        	var btn = document.querySelector('#fade-btn');
+        	
+        	
+        	function fade() {
+        		var opacity = Number(obj.style.opacity);
+        		console.log(obj.style.opacity);
+        		if(opacity == 0) {
+        			btn.innerHTML = '淡入';
+        			btn.disabled = false;
+        		}
+
+        		if(opacity > 0) {
+        			opacity -= 0.005;
+        			obj.style.opacity = opacity.toString();
+        			setTimeout(fade,10);
+        			
+        		}
+        	}
+
+        	function restore() {
+        		var opacity = Number(obj.style.opacity);
+        		console.log(obj.style.opacity);
+        		if(opacity == 1) {
+        			btn.innerHTML = '淡出';
+        			btn.disabled = false;
+        		}
+        		
+        		if(opacity < 1) {
+        			opacity += 0.005;
+        			obj.style.opacity = opacity.toString();
+        			setTimeout(restore,10);
+        			
+        		}
+        	}
+        	//bug 记录
+        	/*
+        	function fade() {
+        		console.log(obj.style.opacity);
+        		if(obj.style.opacity == 0) {
+        			btn.innerHTML = '淡入';
+        			btn.disabled = false;
+        		}
+
+        		if(obj.style.opacity > 0) {
+        			obj.style.opacity -= 0.005;
+        			setTimeout(fade,10);
+        			
+        		}
+        	}
+        	此段代码中直接改变的是obj.style.opacity，但是这种方式获取到的opacity值是‘string’类型，在进行数学运算的时候就容易出现问题。这里利用一个中间变量opacity来进行运算，再将最后的运算值转换成字符类型赋值给obj.style.opacity，确保计算过程的严谨。
+        	*/
+        	btn.onclick = function() {
+        		btn.disabled = true;
+        		console.log(typeof obj.style.opacity);
+        		
+        		if(btn.innerHTML == '淡出') {
+
+        			fade();
+        		}
+        		if(btn.innerHTML == '淡入') {
+        			
+        			restore();
+        			
+        		}
+        	}
+        	
+        </script>
+	</body>
+</html>

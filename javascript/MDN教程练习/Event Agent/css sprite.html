@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>CSS Sprite</title>
+		<style>
+			.box {
+				width: 480px;
+				height: 480px;
+				border: 2px solid pink;
+				background-image: url(erik.jpg);
+				background-position: 0 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box"></div>
+		<input type="button" id="start" value="来，笑一个！">
+		<script>
+			var box = document.querySelector('.box');
+			var btn = document.querySelector('#start');
+			var y = 0;
+			var flag = 0;
+			var t;
+
+			function smile() {
+				//var y = Number(window.getComputedStyle(box).backgroundPositionY);
+				if(y == 480 * 17) {
+					y = 0;
+				}
+				y += 480;
+				console.log(y);
+				box.style.backgroundPositionY = y + 'px';
+			}
+
+			btn.onclick = function() {
+				
+				if(flag == 0) {
+					t = setInterval(smile,100);
+					
+					flag = 1;
+					btn.value = '别笑了，慎得慌！'
+					return;
+				} 
+				if(flag == 1) {
+					clearInterval(t);
+					
+					flag = 0;
+					btn.value = '来，笑一个！'
+					return;
+				}
+
+				
+			}
+			
+			
+		</script>
+	</body>
+</html>

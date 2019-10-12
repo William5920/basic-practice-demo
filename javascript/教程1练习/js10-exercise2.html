@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>新年倒计时</title>
+	<style type="text/css">
+	#num{
+		text-align: center;
+		font-size:40px;
+		color:red;
+	}
+
+	p{
+		text-align:center;
+	}
+	
+	</style>
+	<script type="text/javascript">
+		//定义全局变量，用于记录秒数
+		var n = 10;
+		window.onload = function()
+		{
+			//设置定时器，重复执行函数countdown（）
+			var t = setInterval("countdown()",1000);
+		}
+		//定义函数
+		function countdown()
+		{	
+			if(n === 0) {
+				clearInterval(t)
+			}
+			//判断n是否大于0，因为倒计时不可能有负数
+			if(n>0)
+			{
+				n--;
+				document.getElementById("num").innerHTML = n;
+			}
+
+			//改变网页的背景色
+          	var rndCol = 'rgb('+ random(255) + ',' + random(255) + ',' + random(255) +')'
+        	document.body.style.backgroundColor = rndCol;
+      }
+      		//生成一个随机数
+      		function random(number){
+
+          	return Math.floor(Math.random() * (number+1));
+
+		}
+	</script>
+</head>
+<body>
+	<p>新年倒计时：<span id="num">10</span>&nbsp;！</p>
+</body>
+</html>

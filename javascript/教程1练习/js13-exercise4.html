@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>替换节点</title>
+	<script type="text/javascript">
+		function replace(){
+			var label = document.getElementById("label").value;//替代节点的标签
+			var txt = document.getElementById("txt").value;//替代节点的内容
+			var newNode = document.createElement(label);//创建新的节点
+			var txt1 = document.createTextNode(txt);
+			newNode.appendChild(txt1);
+
+			var oldNode = document.getElementById("lvye");//将被替代的节点
+
+			document.body.replaceChild(newNode,oldNode);//替换
+		}
+	</script>
+</head>
+<body>
+	<p id="lvye">绿叶学习网</p>
+	<hr/>
+	输入标签：<input id="label" type="text"><br/>
+	输入文本：<input id="txt" type="text"><br/>
+	<input type="button" value="替换" onclick="replace()">
+</body>
+</html>

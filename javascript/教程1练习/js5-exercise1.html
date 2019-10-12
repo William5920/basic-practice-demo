@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>在线escape加解密工具制作</title>
+	<style type="text/css">
+		#txt-input,#txt-output{
+			border:2px solid blue;
+		}
+		#enc-button,#dec-button,#reset-button{
+			background-color:yellow;
+		}
+		h3{
+			margin-left:20px;
+		}
+		textarea{
+			background-color:#FFC700;
+		}
+		body{
+			text-align:center;
+		}
+	</style>
+	<script type="text/javascript">
+		//定义加密函数
+		function encrypt()
+		{
+			//获取输入框的值
+			var str = document.getElementById("txt-input").value;
+			//将输入框的值加密，并赋给输出框
+			document.getElementById("txt-output").value = escape(str);
+		}
+		//定义解密函数
+		function decrypt()
+		{
+			//获取输入框的值
+			var str = document.getElementById("txt-input").value;
+			//将输入框的值解密，并赋给输出框
+			document.getElementById("txt-output").value = unescape(str);
+		}
+		
+	</script>
+</head>
+<body>
+	<h3>在线escape加解密工具</h3>
+	<form>
+		<textarea id="txt-input" rows="8" cols="40"></textarea><br/>
+		<input type="button" id="enc-button" value="加密" onclick="encrypt()">
+		<input type="button" id="dec-button" value="解密" onclick="decrypt()">
+		<input type="reset" id="reset-button" value="清空"><br/>
+		<textarea id="txt-output" rows="8" cols="40"></textarea>
+	</form>
+</body>
+</html>

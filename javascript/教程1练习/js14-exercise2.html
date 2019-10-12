@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>搜索框的制作</title>
+	<style type="text/css">
+		#search{
+			color:#bbbbbb;
+			border:1px solid black;
+		}
+	</style>
+</head>
+<body>
+	<input id="search" type="text" value="百度一下，你就知道"><input id="button1" type="button" value="搜索">
+	<script type="text/javascript">
+		//获取元素对象
+		var e = document.getElementById("search");
+		//获取默认的字符串
+		var txt = e.value;
+		//获取焦点事件
+		e.onfocus = function()
+		{
+			if(e.value == txt)
+			{
+				e.value = "";
+			}
+		}
+		//失去焦点事件
+		e.onblur = function()
+		{
+			if(e.value == "")
+			{
+				e.value = txt;
+			}
+		}
+	</script>
+</body>
+</html>

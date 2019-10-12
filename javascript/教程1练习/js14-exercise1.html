@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>下拉菜单设计</title>
+	<style type="text/css">
+		h3{
+			background-color:yellow;
+		}
+	</style>
+</head>
+<body>
+	<h3 id="title">绿叶学习网课程</h3>
+
+	<script type="text/javascript">
+		var lvye = document.getElementById("title");
+		lvye.onmouseover = function(){
+			var ul1 = document.createElement("ul");
+			for(var i=0;i<3;i++)
+			{
+				var li1 = document.createElement("li");
+				var txt = document.createTextNode("course");
+				li1.appendChild(txt);
+				ul1.appendChild(li1);
+			}
+			document.body.appendChild(ul1);
+		}
+		lvye.onmouseout = function(){
+
+			document.body.removeChild(ul);//无法成功消除下拉列表
+		}
+	</script>
+</body>
+</html>

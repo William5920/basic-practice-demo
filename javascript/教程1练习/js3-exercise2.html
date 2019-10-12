@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>输出所有的“水仙花数”</title>
+	<script type="text/javascript">
+		var a,b,c;
+		document.write("水仙花数有：")
+		for(var i=100;i<1000;i++)
+		{
+			a = parseInt(i/100);//百位数
+			b = parseInt(parseInt(i/10)%10);//十位数
+			c = i%10;//个位数
+			if(i == (a*a*a + b*b*b + c*c*c))
+				{document.write(i+",");}
+		}
+		
+	</script>
+</head>
+<body>
+</body>
+</html>

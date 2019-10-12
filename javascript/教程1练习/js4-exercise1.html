@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>比较两个数大小并输出最大数</title>
+	<script type="text/javascript">
+		function maxNum()
+		{
+			//获取两个文本的值
+			var x = document.getElementById("num1").value;
+			var y = document.getElementById("num2").value;
+			//强制转换为数值型
+			x = parseFloat(x);
+			y = parseFloat(y);
+			if(x<y)
+				alert("最大数是："+y);
+			else
+				alert("最大数是："+x);
+		}	
+	</script>
+</head>
+<body>
+	第一个数是：<input type="text" id="num1"><br/>
+	第二个数是：<input type="text" id="num2"><br/>
+	<input type="button" value="计算" onclick="maxNum()">
+</body>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>left fixed right flexible layout</title>
+		<style>
+			/*
+			.wrapper {
+				padding: 15px 20px;
+				border: 1px dashed #ff6c60;
+			}
+
+			.left {
+				background-color: #F48F64;
+				width: 120px;
+				
+			}
+
+			.right {
+				background-color: #64F2F4;
+				margin-left: 20px;
+
+			}
+			*/
+			/* -----------------------基础代码--------------------- */
+			
+			/*
+			.wrapper {
+				padding: 15px 20px;
+				border: 1px dashed #ff6c60;
+				box-sizing: border-box;
+				font-size: 0;  //清除间隔
+			}
+			
+			.left {
+				background-color: #F48F64;
+				width: 120px;
+				
+			}
+			
+			.right {
+				background-color: #64F2F4;
+				margin-left: 20px;
+				width: calc(100% - 140px);
+
+			}
+			
+			.wrapper .left,
+			.wrapper .right {
+				display: inline-block;
+				font-size: 14px;
+				box-sizing: border-box;
+				vertical-align: top;
+				
+			}
+			*/
+			/*------------------------双inline-block方案---------------------*/
+			
+			/*
+			.wrapper {
+				padding: 15px 20px;
+				border: 1px dashed #ff6c60;
+				overflow: auto; 
+				box-sizing: content-box;
+			}
+
+			.left {
+				background-color: #F48F64;
+				width: 120px;
+				
+			}
+
+			.right {
+				background-color: #64F2F4;
+				margin-left: 20px;
+				width: calc(100% - 140px);
+
+			}
+
+			.left,
+			.right {
+				float: left;
+				box-sizing: border-box;
+			}
+			*/
+			/*-------------------------双float方案------------------------*/
+			/*
+			.wrapper {
+				padding: 15px 20px;
+				border: 1px dashed #ff6c60;
+				overflow: hidden;
+			}
+
+			.left {
+				background-color: #F48F64;
+				width: 120px;
+				float: left;
+				
+			}
+
+			.right {
+				background-color: #64F2F4;
+				margin-left: 150px;
+
+
+			}
+			*/
+			/*-------------------float + margin-left 方案-------------------*/
+			/*
+			.wrapper {
+				padding: 15px 20px;
+				border: 1px dashed #ff6c60;
+			}
+
+			.left {
+				background-color: #F48F64;
+				width: 120px;
+				position: absolute;
+				
+			}
+
+			.right {
+				background-color: #64F2F4;
+				margin-left: 150px;
+
+			}
+			*/
+			/*------------------- absolute + margin-left 方案-----------------*/
+			/*
+			.wrapper {
+				padding: 15px 20px;
+				border: 1px dashed #ff6c60;
+				overflow: auto;
+			}
+
+			.left {
+				background-color: #F48F64;
+				width: 120px;
+				float: left;
+				margin-right: 20px;
+				
+			}
+
+			.right {
+				background-color: #64F2F4;
+				margin-left: 0px;
+				overflow: auto;
+
+			}
+			*/
+			/*------------------------float + BFC方案------------------------*/
+			/*
+			.wrapper {
+				padding: 15px 20px;
+				border: 1px dashed #ff6c60;
+				display: flex;
+				align-items: flex-start;
+			}
+
+			.left {
+				background-color: #F48F64;
+				width: 120px;
+				flex: 0 0 auto;
+				
+			}
+
+			.right {
+				background-color: #64F2F4;
+				margin-left: 20px;
+				flex: 1 1 auto;
+
+			}
+			*/
+			/*----------------------------flex方案----------------------------*/
+
+			.wrapper {
+				padding: 15px 20px;
+				border: 1px dashed #ff6c60;
+				display: grid;
+				grid-template-columns: 120px 1fr;
+				align-items: start;
+			}
+
+			.left {
+				background-color: #F48F64;
+				width: 120px;
+				grid-column: 1;
+				
+			}
+
+			.right {
+				background-color: #64F2F4;
+				margin-left: 20px;
+				grid-column: 2;
+			}
+
+			.left,
+			.right {
+				box-sizing: border-box;
+			}
+
+			/*----------------------------grid 方案--------------------------*/
+		</style>
+	</head>
+	<body>
+		<div class="wrapper" id="wrapper">
+			<div class="left">
+				左边固定宽度，高度不固定 </br> </br></br></br>高度有可能会很小，也可能很大。
+			</div>
+			<div class="right">
+				这里的内容可能比左侧高，也可能比左侧低。宽度需要自适应。</br>
+    			基本的样式是，两个div相距20px, 左侧div宽 120px
+    		</div>
+		</div>
+	</body>
+</html>

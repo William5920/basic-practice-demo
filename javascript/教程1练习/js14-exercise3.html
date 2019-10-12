@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<textarea id="txt" rows="5" cols="20"></textarea><br/>
+	字符串长度为：<span id="num"></span><br/>
+	<input id="txt2" type="text" value="欢迎来到字节跳动！">
+	<script type="text/javascript">
+		var e = document.getElementById("txt");
+		var n = document.getElementById("num");
+		var m = document.getElementById("txt2");
+		e.onchange = function()
+		{
+			var len = e.value.length;
+			n.innerText = len;
+		}
+		e.onselect = function()
+		{
+			alert("你选中了多行文本框中的内容！");
+		}
+		m.onselect = function()
+		{
+			alert("你选中了单行文本框中的内容！");
+		}
+	</script>
+
+	
+</body>
+</html>

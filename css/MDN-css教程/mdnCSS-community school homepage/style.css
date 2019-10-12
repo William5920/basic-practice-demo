@@ -1,0 +1,114 @@
+
+/* General setup */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  min-width: 1000px;
+  max-width: 1400px;
+}
+
+/* Layout */
+
+section {
+  float: left;
+  width: 50%;
+}
+
+aside {
+  float: left;
+  width: 30%;
+}
+
+nav {
+  float: left;
+  width: 20%;
+}
+
+footer {
+  clear: both;
+}
+
+header, section, aside, nav, footer {
+  padding: 20px;
+}
+
+/* header and footer */
+
+header, footer {
+  border-top: 5px solid #a66;
+  border-bottom: 5px solid #a66;
+}
+
+/* WRITE YOUR CODE BELOW HERE */
+html {
+  font-size: 10px;
+}
+
+h1 {
+  font-size: 3rem;
+  text-align: center;
+  letter-spacing: 0.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+body p,body li {
+  letter-spacing: 0.5px;
+  word-spacing: 1px;
+  line-height: 1.5;
+}
+
+h2 + p {
+  text-indent: 2rem;
+}
+
+a:link {
+  color: #a66;
+}
+
+a:hover,a:focus {
+  text-decoration: none;
+  color: orange;
+  background-color: blue;
+  border: 1px solid yellow;
+}
+
+a:focus {
+  outline: none;
+}
+
+a:active {
+  color: red;
+}
+
+a[href*="http"] {
+  background: url('external-link-52.png') no-repeat 100% 0;
+  background-size: 10px 10px;
+  padding-right: 14px;
+}
+
+ul {
+  list-style-type: square;
+}
+
+nav ul li {
+  color: #a66;
+  list-style-type: none;
+  border: 2px solid #a66;
+  margin: 10px;
+  height: 60px;
+  width: 180px;
+  text-align: center;
+  padding: 10px;
+  font-size: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+}

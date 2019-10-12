@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>three-column layout(right flexible)</title>
+		<style>
+
+			body,
+			html {
+				height: 100%;
+			}
+			
+
+			.left {
+				background: #9FF9E3;
+				
+				width: 200px;
+				height: 100%;
+			}
+
+			.center {
+				background: #F9ECB1;
+				width: 200px;
+				height: 100%;
+			}
+
+			.right {
+				background: #9FF9F8;
+				height: 100%;
+				text-align: center;
+			}
+			/*---------------------------基础代码--------------------*/
+			/*
+			.left,
+			.center {
+				position: absolute;
+			}
+
+			.center {
+				left: 200px;
+			}
+			*/
+			/*-----------------------position: absolute方法-------------------*/
+			/*
+			body {
+				display: flex;
+			}
+
+			.left,
+			.center {
+				flex: 0 0 auto;
+			}
+
+			.right {
+				flex: 1 1 auto;
+			}
+			*/
+			/*-----------------------------flex方案---------------------*/
+
+			.left,
+			.center {
+				float: left;
+			}
+
+
+		</style>
+	</head>
+	<body>
+		<div class="left">left</div>
+		<div class="center">center</div>
+		<div class="right">right</div>
+	</body>
+</html>

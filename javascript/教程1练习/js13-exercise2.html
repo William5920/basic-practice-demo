@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>创建节点-创建3*3的表格</title>
+	<style type="text/css">
+		th,td{
+			border:1px solid red;
+		}
+	</style>
+	<script type="text/javascript">
+		window.onload=function() {
+		var myTab = document.createElement("table");
+		for(var i=0;i<3;i++)
+		{
+			var myRow = document.createElement("tr");
+			for(var j=0;j<3;j++)
+			{
+				var myCol = document.createElement("td");
+				var txt = document.createTextNode("第"+i+"行，第"+j+"列");
+				myCol.appendChild(txt);
+				myRow.appendChild(myCol);
+			}
+			myTab.appendChild(myRow);
+		}
+		document.body.appendChild(myTab);
+		}
+	</script>
+</head>
+<body>
+	<table>
+		<thead>
+			<tr>
+				<th>第一列</th>
+				<th>第二列</th>
+				<th>第三列</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>4</td>
+				<td>5</td>
+				<td>6</td>
+			</tr>
+			<tr>
+				<td>7</td>
+				<td>8</td>
+				<td>9</td>
+			</tr>
+		</tbody>
+	</table>
+	
+
+</body>
+</html>

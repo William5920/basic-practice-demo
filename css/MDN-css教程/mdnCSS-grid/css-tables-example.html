@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>CSS tables example</title>
+    <style>
+    html {
+      font-family: sans-serif;
+
+    }
+
+    body {
+      width: 980px;
+      margin: 0 auto;
+      /*background-color: yellow;
+      border: 3px solid red;*/
+    }
+
+    .wraper {
+      margin-top: 5px;
+      margin-left: 200px;
+    }
+
+    .row {
+      clear: both;
+    }
+
+    .col {
+      float: left;
+      width: 300px;
+      margin-bottom: 10px;
+      margin-right: 20px;
+      /*background-color: pink;*/
+    }
+
+    .col1 {
+      width: 200px;
+      text-align: right;
+    }
+
+    #fname,#lname,#age {
+      width: 100%;
+      height: 100%;
+    }
+
+    .row3.col1 {
+      width: 510px;
+      text-align: left;
+      color: #999;
+      font-style: italic;
+    }
+
+    /*
+    form {
+      display: table;
+      margin: 0 auto;
+    }
+    form div {
+      display: table-row;
+    }
+    form label, form input {
+      display: table-cell;
+      margin-bottom: 10px;
+    }
+    form label {
+      width: 200px;
+      padding-right: 5%;
+      text-align: right;
+    }
+    form input {
+      width: 300px;
+    }
+    form p {
+      display: table-caption;
+      caption-side: bottom;
+      width: 300px;
+      color: #999;
+      font-style: italic;
+    }
+    */
+    </style>
+  </head>
+  <body>
+    <div class="wraper">
+      <div class="row">
+        <div class="col col1"><label for="fname">First name:</label></div>
+        <div class="col"><input type="text" id="fname"></div>  
+      </div>
+
+      <div class="row">
+        <div class="col col1"><label for="lname">Last name:</label></div>
+        <div class="col"><input type="text" id="lname"></div> 
+      </div>
+      <div class="row">
+        <div class="col col1"><label for="lname">Age:</label></div>
+        <div class="col"><input type="text" id="age"></div> 
+      </div>
+      <div class="row">
+        <div class="col col1 row3">First of all, tell us your name and age.</div>
+      </div>
+    </div>
+    <!--
+    <form>
+    <p>First of all, tell us your name and age.</p>
+      <div>
+        <label for="fname">First name:</label>
+        <input type="text" id="fname">
+      </div>
+      <div>
+        <label for="lname">Last name:</label>
+        <input type="text" id="lname">
+      </div>
+      <div>
+        <label for="age">Age:</label>
+        <input type="text" id="age">
+      </div>
+    </form>
+    -->
+  </body>
+</html>

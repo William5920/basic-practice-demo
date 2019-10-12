@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>插入节点</title>
+	<script type="text/javascript">
+		function insert() {
+			var str1 = document.getElementById("txt").value;//获取文本框的输入值
+			var str2 = document.createTextNode(str1);//创建一个新的文本节点插入到新的<li>节点中去
+			var li1 = document.createElement("li");//创建一个新的li节点
+			li1.appendChild(str2);//将文本节点插入到列表选项当中去
+			//list.appendChild(li1);//将新节点插入到无序表中
+			list.insertBefore(li1,list.firstChild);
+		}
+
+		function del(){
+			 var list1 = document.getElementById("list");
+			if(list1.hasChildNodes)
+			{
+				list1.removeChild(list1.lastChild);
+			}
+		}
+
+		function add(){
+			var list2 = document.getElementById("list");
+			document.body.appendChild(list2.cloneNode(1));
+		}
+	</script>
+</head>
+<body>
+	<ul id="list">
+		<li>HTML</li>
+		<li>CSS</li>
+		<li>JavaScript</li>
+	</ul>
+	列项文本：<input id="txt" type="text"><br/>
+	<input type="button" value="插入新项" onclick="insert()">
+	<input type="button" value="删除旧项" onclick="del()">
+	<input type="button" value="复制节点" onclick="add()">
+</body>
+</html>

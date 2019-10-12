@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>操作字符串函数</title>
+    <script type="text/javascript">
+        function strNum()
+        {
+            //获取输入文本框中的值，这里获取的值是一个字符串
+            var s = document.getElementById("num").value;
+            var s1="";
+            for(var i=0;i<4;i++)
+            {
+                //如果获取的不是最后一个字符
+                if(i!=3)
+                {
+                    s1+=s.charAt(i)+" ";
+                }
+                //如果获取的是最后一个字符
+                else
+                {
+                    s1+=s.charAt(i);
+                }
+            }
+            alert(s1);
+        }
+    </script>
+</head>
+<body>
+    输入数字是：<input type="text" id="num"/><br/>
+    <input type="button" onclick="strNum()" value="提交"/>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>left-flexible right-fixed layout</title>
+		<style>
+			.container {
+				padding: 15px 20px;
+				border: 1px dashed #ff6c60;
+
+			}
+
+			.left {
+				background-color: #F48F64;
+				
+				
+			}
+
+			.right {
+				background-color: #64F2F4;
+				width: 120px;
+				
+
+			}
+
+
+
+			
+			/*------------------------以上为基础代码-----------------------*/
+			/*
+			.container {
+				font-size: 0;
+				box-sizing: border-box;
+			}
+
+			.left {
+				width: calc(100% - 140px);
+			}
+
+			.left,
+			.right {
+				display: inline-block;
+				font-size: 14px;
+				box-sizing: border-box;
+				vertical-align: top;
+			}
+			*/
+			/*------------------------双inline-block方案-----------------------*/
+			/*
+			.container {
+				overflow: auto;
+				box-sizing: content-box;
+			}
+
+			.left {
+				width: calc(100% - 140px);
+			}
+
+			.left,
+			.right {
+				float: left;
+				box-sizing: border-box;
+			}
+			*/
+			/*-----------------------------双float方案-------------------------*/
+			/*
+			.right {
+				float: right;
+			}
+
+			.left {
+				margin-right: 140px;
+				
+			}
+			*/
+			/*--float：right；+ margin-right 方案（需在html中调整左右列的先后顺序）--*/
+			/*
+			.left {
+				margin-right: 140px;
+				
+			}
+
+			.right {
+				position: absolute;
+				right: 29px;
+			}
+			*/
+			/*--absolute + margin-right 方案（需在html中调整左右列的先后顺序）--*/
+			/*
+			.container {
+				overflow: auto;
+			}
+
+			.left {
+				overflow: auto;
+			}
+
+			.right {
+				float: right;
+			}
+			*/
+			/*------------------------float + BFC 方案-----------------------*/
+			/*
+			.container {
+				display: flex;
+				align-items: flex-start;
+			}
+
+			.left {
+				flex: 1 1 auto;
+			}
+
+			.right {
+				flex: 0 0 auto;
+			}
+			*/
+			/*---------------------------flex方案-------------------------*/
+
+			.container {
+				display: grid;
+				grid-template-columns: 1fr 120px;
+				align-items: start;
+			}
+
+			.left {
+				grid-column: 1;
+				margin-right: 20px;
+			}
+			
+			.right {
+				grid-column: 2;
+			}
+
+			.left,
+			.right {
+				box-sizing: border-box;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="left">左侧自适应<br><br><br><br>（拉高行高）</div>
+			<div class="right">右侧固定宽度</div>
+			
+			
+			
+		</div>
+	</body>
+</html>

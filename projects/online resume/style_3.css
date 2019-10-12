@@ -1,0 +1,54 @@
+ * {
+ 	box-sizing: border-box;
+ }
+
+.basic-info p,.contact p {
+	float: left;
+	margin-right: 30px;
+}
+
+.contact,.basic-info {
+	overflow: auto;
+}
+
+h1 {
+	color: white;
+	background-color: gray;
+	line-height: 150px;
+	padding-left: 20px;
+	text-align: center;
+	margin: 0;
+}
+
+.main {
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+}
+
+.content {
+	grid-column: auto / span 6;
+	grid-gap: 0;
+	padding: 20px; 
+}
+
+h2 {
+	height: 180px;
+	background-color: gainsboro;
+	margin: 0;
+	text-align: center;
+	padding-top: 80px;
+}
+
+.content, h2:nth-of-type(5) {
+	border-bottom: 2px solid grey;
+}
+
+h2 {
+	border-bottom: 2px solid white;
+}
+
+.ability p,
+.education p,
+.projects p {
+	display: inline;
+}

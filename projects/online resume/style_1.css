@@ -1,0 +1,14 @@
+.basic-info p,.contact p {
+	float: left;
+	margin-right: 30px;
+}
+
+.contact,.basic-info {
+	overflow: auto;
+}
+
+.ability p,
+.education p,
+.projects p {
+	margin-top: 3px;
+}

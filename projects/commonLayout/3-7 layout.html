@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>3-7 layout</title>
+		<style>
+			/*
+			body {
+				font-size: 0;
+
+			}
+
+			#left {
+				background-color: #F48F64;
+				width: 30%;
+				height: 800px;
+				display: inline-block;
+				
+			}
+
+			#right {
+				background-color: #64F2F4;
+				width: 70%;
+				height: 800px;
+				display: inline-block;
+				
+			}
+			*/
+			/*method1   key: display: inline-block;*/
+
+			/*
+			#left {
+				background-color: #F48F64;
+				width: 30%;
+				height: 800px;
+				float: left;
+			}
+
+			#right {
+				background-color: #64F2F4;
+				width: 70%;
+				height: 800px;
+				float: right;
+			}
+			*/
+			/* method2    key: float*/
+
+			body {
+				display: flex;
+			}
+
+			#left {
+				background-color: #F48F64;
+				flex: 3;
+				height: 800px;
+				
+			}
+
+			#right {
+				background-color: #64F2F4;
+				flex: 7;
+				height: 800px;
+				
+				
+			}
+			/* method3    key: display: flex;*/
+
+		</style>
+	</head>
+	<body>
+		<div id="left">left-30%</div>
+		<div id="right">right-70%</div>
+	</body>
+</html>

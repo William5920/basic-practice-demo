@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>left and middle fixed right flexile layout</title>
+		<style>
+			/*
+			.header,
+			.footer {
+				background: #ccc;
+				line-height: 100px;
+				text-align: center;
+				font-size: 20px;
+				color: white;
+			}
+
+			.main {
+				font-size: 0;
+			}
+
+			.main .left {
+				background: #9FF9E3;
+				width: 200px;
+			}
+
+			.main .middle {
+				background: #F9ECB1;
+				width: 1000px;
+			}
+
+			.main .right {
+				background: #9FF9F8;
+				width: calc(100% - 1200px);
+			}
+
+			.main .left,
+			.main .middle,
+			.main .right {
+				display: inline-block;
+				font-size: 20px;
+				text-align: center;
+				color: white;
+				line-height: 600px;
+			}
+			*/
+			/*------------------------inline-block方案-------------------------*/
+			
+			body {
+				min-width: 1200px;
+			}
+
+			.header,
+			.footer {
+				background: #ccc;
+				line-height: 100px;
+				text-align: center;
+				font-size: 20px;
+				color: white;
+			}
+			
+			.main {
+				padding-left: 1200px;
+				overflow: auto;
+			}
+			
+			.main .column {
+				float: left;
+				position: relative;
+			}
+
+			.main .left {
+				background: #9FF9E3;
+				width: 200px;
+				margin-left: -100%;
+				right: 1200px;
+			}
+
+			.main .middle {
+				background: #F9ECB1;
+				width: 1000px;
+				margin-left: calc(-1000px - 100%);
+				
+			}
+
+			.main .right {
+				background: #9FF9F8;
+				width: 100%;
+				
+			}
+			
+			/*----------margin为负的方案(将html中的right放在最前面)----------*/
+
+		</style>
+	</head>
+	<body>
+		<div class="header">header</div>
+		<div class="main">
+			<div class="right column">right</div>
+			<div class="left column">left</div>
+			<div class="middle column">middle</div>
+			
+		</div>
+		<div class="footer">footer</div>
+	</body>
+</html>
